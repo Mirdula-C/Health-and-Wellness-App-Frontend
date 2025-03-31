@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+body {
+  background-image: url('/background-3.jpeg'); /* Ensure the path is correct */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Fix the background in place */
+}
