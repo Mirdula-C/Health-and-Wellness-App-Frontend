@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://health-and-wellness-app-backend-2.onrender.com/api",
+  baseURL: "http://localhost:5000/api",
 });
 
 // ✅ Automatically include token in headers
