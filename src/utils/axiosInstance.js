@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://health-and-wellness-app-backend-2.onrender.com/api",
+  baseURL: "https://health-and-wellness-app-backend.onrender.com/api",
 });
 
 // ✅ Automatically include token in headers
