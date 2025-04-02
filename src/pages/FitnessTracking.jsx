@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import axios from "../utils/axiosInstance"; // ✅ Use axiosInstance with automatic token handling
+import axios from "../utils/axiosInstance";
 import { FaDumbbell, FaClock, FaRoad, FaCalendarAlt, FaTrash } from "react-icons/fa";
 
 const FitnessTracking = () => {

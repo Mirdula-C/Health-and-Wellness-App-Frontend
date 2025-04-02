@@ -25,7 +25,7 @@ const NutritionPlanning = () => {
       }
 
       try {
-        const res = await axios.get("http://localhost:5000/api/nutrition/view-nutrition", {
+        const res = await axios.get("https://health-and-wellness-app-backend.onrender.com/api/nutrition/view-nutrition", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -63,7 +63,7 @@ const NutritionPlanning = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/nutrition/log-meal",
+        "https://health-and-wellness-app-backend.onrender.com/api/nutrition/log-meal",
         newMeal,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -92,7 +92,7 @@ const NutritionPlanning = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:5000/api/nutrition/delete-meal/${id}`, {
+      await axios.delete(`https://health-and-wellness-app-backend.onrender.com/api/nutrition/delete-meal/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

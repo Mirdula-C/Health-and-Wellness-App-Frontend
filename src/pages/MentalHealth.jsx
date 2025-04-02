@@ -36,7 +36,7 @@ const MentalHealth = () => {
       setError("");
 
       try {
-        const res = await axios.get("http://localhost:5000/api/mentalhealth", {   // ✅ Fixed route
+        const res = await axios.get("https://health-and-wellness-app-backend.onrender.com/api/mentalhealth", {   // ✅ Fixed route
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -61,7 +61,7 @@ const MentalHealth = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/mentalhealth",     // ✅ Fixed route
+        "https://health-and-wellness-app-backend.onrender.com/api/mentalhealth",     // ✅ Fixed route
         { mood, journalEntry, date: entryDate },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -80,7 +80,7 @@ const MentalHealth = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/mentalhealth/${id}`, {  // ✅ Fixed route
+      await axios.delete(`https://health-and-wellness-app-backend.onrender.com/api/mentalhealth/${id}`, {  // ✅ Fixed route
         headers: { Authorization: `Bearer ${token}` }
       });
 

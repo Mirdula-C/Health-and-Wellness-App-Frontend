@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import axios from "../utils/axiosInstance"; // ✅ Token-handled axios instance
+import axios from "../utils/axiosInstance"; 
 import {
   FaChartLine,
   FaUtensils,
@@ -12,9 +12,9 @@ import {
 
 const Dashboard = () => {
   const [dashboardData, setDashboardData] = useState({
-    fitness: { totalDuration: 0 },  // ✅ Weekly total duration
-    nutrition: { calories: 0, protein: 0, carbs: 0, fat: 0 },  // ✅ Weekly totals
-    mentalHealth: { averageMood: "N/A" },  // ✅ Average mood
+    fitness: { totalDuration: 0 }, 
+    nutrition: { calories: 0, protein: 0, carbs: 0, fat: 0 }, 
+    mentalHealth: { averageMood: "N/A" },  
   });
 
   const [loading, setLoading] = useState(true);
@@ -25,8 +25,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/dashboard/week");  // ✅ Weekly data route
-
+        const response = await axios.get("/dashboard/week"); 
         console.log("Weekly Dashboard Data:", response.data);
 
         if (response.status === 200) {

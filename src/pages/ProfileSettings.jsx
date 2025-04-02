@@ -17,7 +17,7 @@ const ProfileSettings = () => {
         const token = localStorage.getItem("token");
 
         // Fetch Profile
-        const profileRes = await axios.get("http://localhost:5000/api/profile/profile", {
+        const profileRes = await axios.get("https://health-and-wellness-app-backend.onrender.com/api/profile/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -27,7 +27,7 @@ const ProfileSettings = () => {
         });
 
         // Fetch Goals
-        const goalsRes = await axios.get("http://localhost:5000/api/goal-tracking/get-goals", {
+        const goalsRes = await axios.get("https://health-and-wellness-app-backend.onrender.com/api/goal-tracking/get-goals", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -51,7 +51,7 @@ const ProfileSettings = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.post("http://localhost:5000/api/goal-tracking/set-goal", goals, {
+      await axios.post("https://health-and-wellness-app-backend.onrender.com/api/goal-tracking/set-goal", goals, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -67,7 +67,7 @@ const ProfileSettings = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.put("http://localhost:5000/api/profile/update-profile", profile, {
+      await axios.put("https://health-and-wellness-app-backend.onrender.com/api/profile/update-profile", profile, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -83,7 +83,7 @@ const ProfileSettings = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("http://localhost:5000/api/profile/export", {
+      const res = await axios.get("https://health-and-wellness-app-backend.onrender.com/api/profile/export", {
         headers: { Authorization: `Bearer ${token}` },
         responseType: "blob",
       });
@@ -107,7 +107,7 @@ const ProfileSettings = () => {
       try {
         const token = localStorage.getItem("token");
 
-        await axios.delete("http://localhost:5000/api/profile/delete-account", {
+        await axios.delete("https://health-and-wellness-app-backend.onrender.com/api/profile/delete-account", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -133,7 +133,7 @@ const ProfileSettings = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:5000/api/profile/toggle-reminders",
+        "https://health-and-wellness-app-backend.onrender.com/api/profile/toggle-reminders",
         { enabled: !remindersEnabled },
         { headers: { Authorization: `Bearer ${token}` } }
       );

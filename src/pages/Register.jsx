@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/Logo.png"; // Ensure this path is correct
+import logo from "../assets/Logo.png"; 
 
 function Register() {
   const [name, setName] = useState("");
@@ -12,7 +12,7 @@ function Register() {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    setError(""); // Clear previous errors
+    setError(""); 
 
     if (password !== confirmPassword) {
       setError("Passwords do not match!");
@@ -20,7 +20,7 @@ function Register() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      const response = await fetch("https://health-and-wellness-app-backend.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),
@@ -33,7 +33,7 @@ function Register() {
       }
 
       console.log("Registration Successful:", data);
-      navigate("/login"); // Redirect to login after success
+      navigate("/login"); 
 
     } catch (err) {
       setError(err.message);

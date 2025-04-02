@@ -26,7 +26,7 @@ const GoalTracking = () => {
 
     const fetchGoals = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/goal-tracking/get-goals", {
+        const res = await axios.get("https://health-and-wellness-app-backend.onrender.com/api/goal-tracking/get-goals", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProgress(res.data);
@@ -53,14 +53,14 @@ const GoalTracking = () => {
     const newGoals = { steps, exercise, calories, water };
 
     try {
-      await axios.post("http://localhost:5000/api/goal-tracking/set-goal", newGoals, {
+      await axios.post("https://health-and-wellness-app-backend.onrender.com/api/goal-tracking/set-goal", newGoals, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
       alert("Goals updated successfully!");
 
       // 🔥 Immediately refresh progress after setting goals
-      const res = await axios.get("http://localhost:5000/api/goal-tracking/get-goals", {
+      const res = await axios.get("https://health-and-wellness-app-backend.onrender.com/api/goal-tracking/get-goals", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProgress(res.data);

@@ -24,9 +24,9 @@ const ProgressPage = () => {
         const headers = { Authorization: `Bearer ${token}` };  // ✅ Correct token syntax
 
         const [exerciseRes, nutritionRes, moodRes] = await Promise.all([
-          axios.get("http://localhost:5000/api/fitness/progress", { headers }),
-          axios.get("http://localhost:5000/api/nutrition/progress", { headers }),
-          axios.get("http://localhost:5000/api/mentalhealth/progress", { headers })
+          axios.get("https://health-and-wellness-app-backend.onrender.com/api/fitness/progress", { headers }),
+          axios.get("https://health-and-wellness-app-backend.onrender.com/api/nutrition/progress", { headers }),
+          axios.get("https://health-and-wellness-app-backend.onrender.com/api/mentalhealth/progress", { headers })
         ]);
 
         console.log("✅ Nutrition Data:", nutritionRes.data);
