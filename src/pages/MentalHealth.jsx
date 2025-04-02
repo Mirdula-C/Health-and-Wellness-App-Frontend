@@ -36,7 +36,7 @@ const MentalHealth = () => {
       setError("");
 
       try {
-        const res = await axios.get("https://health-and-wellness-app-backend.onrender.com/api/mentalhealth/", {   // ✅ Fixed route
+        const res = await axios.get("https://health-and-wellness-app-backend.onrender.com/api/mentalhealth", {   // ✅ Fixed route
           headers: { Authorization: `Bearer ${token}` }
         });
         console.log("API response:", res.data); 
