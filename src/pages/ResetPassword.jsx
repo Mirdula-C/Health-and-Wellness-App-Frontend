@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 function ResetPassword() {
-  const { token } = useParams(); // Get token from URL
+  const { token } = useParams(); 
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -42,7 +42,7 @@ function ResetPassword() {
   return (
     <div
       className="flex items-center justify-center min-h-screen bg-cover bg-center p-4"
-      style={{ backgroundImage: "url('/background-3.jpeg')" }} // Make sure this image is in 'public/'
+      style={{ backgroundImage: "url('/background-3.jpeg')" }} 
     >
       <div className="backdrop-blur-xl bg-white/20 border border-white/30 shadow-2xl rounded-lg w-full max-w-lg p-8 text-center">
         <h2 className="text-2xl font-bold text-black">Reset Password</h2>
